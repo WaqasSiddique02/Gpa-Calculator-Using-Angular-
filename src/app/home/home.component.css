@@ -10,3 +10,21 @@
     margin-bottom: 10px;
   }
   
+  .gradient-bg {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 40px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.course-label {
+  color: #fff; 
+  font-weight: bold; 
+  font-size: 1.2rem; 
+  background-color: rgba(255, 255, 255, 0.226); 
+  padding: 5px 10px; 
+  border-radius: 8px; 
+  display: inline-block; 
+  margin-bottom: 10px; 
+}
