@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h2 class="text-center">GPA Calculator</h2>
+    
+    <form (submit)="calculateGPA()">
+      <div class="form-group" *ngFor="let course of courses; let i = index">
+        <label>Course {{ i + 1 }}</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Grade (A, B, C...)" [(ngModel)]="course.grade" name="grade{{ i }}" required />
+          </div>
+          <div class="col-md-6">
+            <input type="number" class="form-control" placeholder="Credit Hours" [(ngModel)]="course.creditHours" name="credit{{ i }}" required />
+          </div>
+        </div>
+      </div>
+  
+      <button type="button" class="btn btn-secondary mt-3" (click)="addCourse()">Add Course</button>
+      <button type="submit" class="btn btn-primary mt-3">Calculate GPA</button>
+    </form>
+  
+    <div *ngIf="gpa !== null" class="mt-4">
+      <h4>Your GPA: {{ gpa | number:'1.2-2' }}</h4>
+    </div>
+  </div>
+  
